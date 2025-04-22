@@ -5,6 +5,7 @@ function RestaurantsContainer(props) {
   return (
     <div className="restaurantContainer">
       {props.restaurants.map((restaurant) => (
+        // passing the restaurant object as props to the Restaurant component
         <Restaurant key={restaurant.id} restaurant={restaurant} />
       ))}
     </div>
