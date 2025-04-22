@@ -5,7 +5,7 @@ function RestaurantsContainer(props) {
   return (
     <div className="restaurantContainer">
       {props.restaurants.map((restaurant) => (
-        <Restaurant restaurant={restaurant} />
+        <Restaurant key={restaurant.id} restaurant={restaurant} />
       ))}
     </div>
   );
