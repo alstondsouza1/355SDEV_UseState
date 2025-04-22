@@ -26,11 +26,12 @@ function Restaurant(props) {
         <li>{props.restaurant.cuisine}</li>
         <li>{props.restaurant.rating}</li>
       </ul>
-      // buttons to show/hide hours and menu
+
+      {/*buttons to show/hide hours and menu */}
       <button onClick={handleHours}>Hours</button>
       <button onClick={handleMenu}>Menu</button>
 
-      // render the hours and menu sections based on state
+      {/*render the hours and menu sections based on state */}
       {menu && (
         <ul>
           {props.restaurant.menu.map((menuItem, index) => (
@@ -40,10 +41,11 @@ function Restaurant(props) {
       )}
       {hours && (
         <ul>
-          {Object.entries(props.restaurant.hours).map(([day, time], index) => (
-            <li key={index}>
+          {Object.entries(props.restaurant.hours).map(([day, time]) => (
+            <li key={day}>
               <strong>{day.charAt(0).toUpperCase() + day.slice(1)}:</strong>{" "}
-              {`${time}`}</li>
+              {time}
+            </li>
           ))}
         </ul>
       )}
