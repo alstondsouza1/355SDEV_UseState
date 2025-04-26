@@ -16,8 +16,8 @@ function App() {
   return (
     <div className="App">
       <h1>Restaurants</h1>
-      <RestaurantsContainer restaurants={restaurantsList}/>
       <RestaurantForm addRestaurant={addRestaurant} />
+      <RestaurantsContainer restaurants={restaurantsList}/>
     </div>
   );
 }

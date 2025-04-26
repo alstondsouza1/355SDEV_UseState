@@ -31,7 +31,7 @@ function Restaurant(props) {
       <button onClick={handleHours}>Hours</button>
       <button onClick={handleMenu}>Menu</button>
 
-      {/*render the hours and menu sections based on state */}q
+      {/*render the hours and menu sections based on state */}
       {menu && (
         <ul>
           {props.restaurant.menu.map((menuItem, index) => (
